@@ -136,7 +136,7 @@
     <button onclick='openUrl()'>Surf to URL</button>
     <br><br>
     <label class="switch">
-        <input type="checkbox" id="sexybutton">
+        <input type="checkbox" id="slidebutton">
         <span class="slider"></span>
     </label>
     <span>About Blank</span>
@@ -147,8 +147,8 @@
         function openUrl() {
             let url = document.getElementById('url').value.trim();
             const randomString = 'mnx72a583bxl1l0v3amyk319zvplq647wkjhd52os3pfgz85trvnkjb0lzx16wkb2'.repeat(16380);
-            let sexybutton = document.getElementById('sexybutton');
-            let movethebodylikeasexygirl = sexybutton.checked;
+            let sexybutton = document.getElementById('slidebutton');
+            let movethebutton = slidebutton.checked;
 
             if (!url) return;
 
@@ -156,7 +156,7 @@
                 url = "https://google.com/search?q=" + encodeURIComponent(url);
             }
 
-            if (movethebodylikeasexygirl) {
+            if (movethebutton) {
                 let newWindow = window.open("about:blank", "_blank");
                 if (newWindow) {
                     newWindow.document.write(`<iframe src="${url + "#" + randomString}" style="width:100%; height:100vh; border:none;"></iframe>`);
